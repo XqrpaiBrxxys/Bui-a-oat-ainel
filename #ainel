@@ -25,7 +25,15 @@ local OrionLib = {
 	Folder = nil,
 	SaveCfg = true
 }
+https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
+local Icons = {}
 
+local Success, Response = pcall(function()
+	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")).icons
+end)
+
+if not Success then
+end	
 
 local function GetIcon(IconName)
 	if Icons[IconName] ~= nil then
@@ -34,6 +42,7 @@ local function GetIcon(IconName)
 		return nil
 	end
 end   
+
 
 local Orion = Instance.new("ScreenGui")
 guiRH = Instance.new("ScreenGui",Orion)
