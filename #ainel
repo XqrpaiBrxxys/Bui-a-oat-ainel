@@ -23,9 +23,10 @@ local OrionLib = {
 	},
 	SelectedTheme = "Default",
 	Folder = nil,
-	SaveCfg = true
+	SaveCfg = false
 }
-https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
+
+--Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
 
 local Success, Response = pcall(function()
@@ -33,6 +34,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
+	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -42,7 +44,6 @@ local function GetIcon(IconName)
 		return nil
 	end
 end   
-
 
 local Orion = Instance.new("ScreenGui")
 guiRH = Instance.new("ScreenGui",Orion)
