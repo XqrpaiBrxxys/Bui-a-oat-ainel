@@ -472,14 +472,14 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "SyniX HUB"
+	WindowConfig.Name = WindowConfig.Name or "SyniX Hub"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "SyniX HUB"
+	WindowConfig.IntroText = WindowConfig.IntroText or "SyniX Hub"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -665,11 +665,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
-	  OrionLib:MakeNotification({Name = "SyniX HUB",Content = "Script being deleted, data not deleted." ,Image = "rbxassetid://",Time = 7})task.wait(1)
+	  OrionLib:MakeNotification({Name = "SyniX Hub",Content = "Script being deleted, data not deleted." ,Image = "rbxassetid://",Time = 7})task.wait(1)
 	  Orion:Destroy()
 	end)
 
-	OrionLib:MakeNotification({Name = "SyniX HUB",Content = "Script being Started | BUILD A BOAT FOR TREASURE" ,Image = "rbxassetid://14824506141",Time = 7})
+	OrionLib:MakeNotification({Name = "SyniX Hub",Content = "Script being Started | BUILD A BOAT FOR TREASURE" ,Image = "rbxassetid://14824506141",Time = 7})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
@@ -1722,7 +1722,7 @@ textLabel.Parent = screenGui
 textLabel.Size = UDim2.new(0.3, 0, 0.1, 0)  -- Define o tamanho do TextLabel
 textLabel.Position = UDim2.new(0.36, 0, 0, -30)  -- Posiciona o TextLabel um pouco mais para a direita e um pouco mais para baixo
 textLabel.BackgroundTransparency = 1  -- Torna o fundo do TextLabel transparente
-textLabel.Text = "SyniX HUB"  -- O texto que será exibido
+textLabel.Text = "SyniX Hub"  -- O texto que será exibido
 textLabel.TextColor3 = Color3.fromRGB(0, 0, 0)  -- Define a cor do texto como preto
 textLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)  -- Cor inicial da borda (Branco)
 textLabel.TextStrokeTransparency = 0  -- Torna a borda visível
